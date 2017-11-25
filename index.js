@@ -9,8 +9,9 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const config = require('./config');
 
+
 // DB Setup
-mongoose.connect('mongodb://config.mongoUser:config.mongoPass@ds257495.mlab.com:57495/coolgifts');
+mongoose.connect('mongodb://'+config.mongoUser+':'+config.mongoPass+'@ds257495.mlab.com:57495/coolgifts');
 // mongoose.connect('mongodb://localhost:auth/auth');
 
 // App Setup
