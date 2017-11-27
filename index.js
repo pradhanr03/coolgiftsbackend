@@ -10,13 +10,13 @@ const cors = require('cors');
 
 
 // DB Setup
-if (process.env.secret) {
+// if (process.env.secret) {
   mongoose.connect('mongodb://'+process.env.mongoUser+':'+process.env.mongoPass+'@ds257495.mlab.com:57495/coolgifts');
-}
-else {
-  const config = require('./config');
-  mongoose.connect('mongodb://'+config.mongoUser+':'+config.mongoPass+'@ds257495.mlab.com:57495/coolgifts');  
-}
+// }
+// else {
+//   const config = require('./config');
+//   mongoose.connect('mongodb://'+config.mongoUser+':'+config.mongoPass+'@ds257495.mlab.com:57495/coolgifts');  
+// }
 // mongoose.connect('mongodb://localhost:auth/auth');
 
 // App Setup
