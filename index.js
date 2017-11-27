@@ -11,7 +11,12 @@ const config = require('./config');
 
 
 // DB Setup
-mongoose.connect('mongodb://'+config.mongoUser+':'+config.mongoPass+'@ds257495.mlab.com:57495/coolgifts');
+if (process.env.secret) {
+  mongoose.connect('mongodb://'+process.env.mongoUser+':'+process.env.mongoPass+'@ds257495.mlab.com:57495/coolgifts');
+}
+else {
+  mongoose.connect('mongodb://'+config.mongoUser+':'+config.mongoPass+'@ds257495.mlab.com:57495/coolgifts');  
+}
 // mongoose.connect('mongodb://localhost:auth/auth');
 
 // App Setup
