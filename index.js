@@ -7,7 +7,6 @@ const app = express();
 const router = require('./router');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const config;
 
 
 // DB Setup
@@ -15,7 +14,7 @@ if (process.env.secret) {
   mongoose.connect('mongodb://'+process.env.mongoUser+':'+process.env.mongoPass+'@ds257495.mlab.com:57495/coolgifts');
 }
 else {
-  config = require('./config');
+  const config = require('./config');
   mongoose.connect('mongodb://'+config.mongoUser+':'+config.mongoPass+'@ds257495.mlab.com:57495/coolgifts');  
 }
 // mongoose.connect('mongodb://localhost:auth/auth');
