@@ -5,7 +5,7 @@ const passport = require('passport');
 
 const requireAuth = passport.authenticate('jwt', { session: false });
 const requireSignin = passport.authenticate('local', { session: false });
-const config = require('./config');
+// const config = require('./config');
 // const {OperationHelper} = require('apac');
 
 // var opHelper = new OperationHelper({
